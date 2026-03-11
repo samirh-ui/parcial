@@ -16,12 +16,13 @@ demo/
     ├── main/
     │   ├── java/
     │   │   └── com/example/
-    │   │       ├── Main.java      # Clase principal
-    │   │       ├── Libro.java     # Modelo base de Libro
-    │   │       └── libroTexto.java # Modelo de Libro de Texto
-    │   └── resources/             # Archivos de recursos
+    │   │       ├── Main.java              # Clase principal
+    │   │       ├── Libro.java             # Modelo base de Libro
+    │   │       ├── libroTexto.java        # Modelo de Libro de Texto
+    │   │       └── libroTextoUniajc.java  # Modelo de Libro de Texto UNIAJC
+    │   └── resources/                     # Archivos de recursos
     └── test/
-        └── java/                  # Tests unitarios
+        └── java/                          # Tests unitarios
 ```
 
 ## Clases del Modelo
@@ -58,7 +59,28 @@ Clase que hereda de `Libro` y representa un libro de texto específico para curs
 - `setCurso(String curso)`: Establece el curso del libro de texto
 - `toString()`: Sobrescribe el método para incluir información del curso
 
+### libroTextoUniajc.java
+Clase que hereda de `libroTexto` y representa un libro de texto específico de la Universidad UNIAJC.
+
+**Herencia:** Extiende la clase `libroTexto` (que a su vez extiende `Libro`)
+
+**Atributos adicionales:**
+- `facultad`: Facultad de la Universidad UNIAJC a la que pertenece el libro
+
+**Constructores:**
+- `libroTextoUniajc(String titulo, String autor, int numEjemplares, int numEjemplaresPrestados, String curso, String universidad)`: Constructor que inicializa todos los atributos incluyendo los heredados
+
+**Métodos:**
+- Hereda todos los métodos de las clases `libroTexto` y `Libro`
+- `toString()`: Sobrescribe el método para incluir información de la facultad
+
 ## Historial de Cambios
+
+### creando clase libro tecto uniajc, con sus atributos, constructor y metodos
+- Se creó la clase `libroTextoUniajc` que hereda de `libroTexto`
+- Se agregó el atributo `facultad` para libros de texto de UNIAJC
+- Se implementó constructor completo y método `toString()` sobrescrito
+- Extensión de la jerarquía de herencia: Libro → libroTexto → libroTextoUniajc
 
 ### agrendo metodos get y set
 - Se agregaron métodos getter y setter para el atributo `curso` en `libroTexto`
