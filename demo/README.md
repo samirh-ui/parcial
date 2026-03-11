@@ -18,6 +18,7 @@ demo/
     │   │   └── com/example/
     │   │       ├── Main.java              # Clase principal
     │   │       ├── Libro.java             # Modelo base de Libro
+    │   │       ├── Novela.java            # Modelo de Novela
     │   │       ├── libroTexto.java        # Modelo de Libro de Texto
     │   │       └── libroTextoUniajc.java  # Modelo de Libro de Texto UNIAJC
     │   └── resources/                     # Archivos de recursos
@@ -41,6 +42,21 @@ Clase base que representa un libro en la biblioteca.
 - `devolucion()`: Registra la devolución de un libro
 - Getters y setters para todos los atributos
 - `toString()`: Representación en texto del objeto
+
+### Novela.java
+Clase que hereda de `Libro` y representa una novela literaria.
+
+**Herencia:** Extiende la clase `Libro`
+
+**Atributos adicionales:**
+- `tipo`: Tipo o género de la novela (ej: romance, misterio, ciencia ficción, etc.)
+
+**Constructores:**
+- `Novela(String titulo, String autor, int numeroEjemplares, int numeroPrestados, String tipo)`: Constructor que inicializa todos los atributos incluyendo los heredados
+
+**Métodos:**
+- Hereda todos los métodos de la clase `Libro`
+- `toString()`: Sobrescribe el método para incluir información del tipo de novela
 
 ### libroTexto.java
 Clase que hereda de `Libro` y representa un libro de texto específico para cursos académicos.
@@ -75,6 +91,11 @@ Clase que hereda de `libroTexto` y representa un libro de texto específico de l
 - `toString()`: Sobrescribe el método para incluir información de la facultad
 
 ## Historial de Cambios
+
+### creando clase novela con su atribuetos, sus metodos y hereda de libro
+- Se creó la clase `Novela` que hereda de `Libro`
+- Se agregó el atributo `tipo` para clasificar el género de la novela
+- Se implementó constructor completo y método `toString()` sobrescrito
 
 ### creando clase libro tecto uniajc, con sus atributos, constructor y metodos
 - Se creó la clase `libroTextoUniajc` que hereda de `libroTexto`
