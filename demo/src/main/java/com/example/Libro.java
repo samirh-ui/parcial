@@ -7,7 +7,16 @@ public class Libro {
     public int numEjemplares;
     public int numEjemplaresPrestados;
 
-   
+    public Libro() {
+    }
+
+    public Libro(String titulo, String autor, int numEjemplares, int numEjemplaresPrestados) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.numEjemplares = numEjemplares;
+        this.numEjemplaresPrestados = numEjemplaresPrestados;
+    }
+
 
 
     
