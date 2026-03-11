@@ -49,6 +49,16 @@ public class Libro {
         this.numEjemplaresPrestados = numEjemplaresPrestados;
     }
 
+    public boolean prestamo() {
+        if (numEjemplaresPrestados < numEjemplares) {
+            numEjemplaresPrestados++;
+            System.out.println("Libro prestado: " + titulo);
+            return true;
+        } else {
+            System.out.println("No hay ejemplares disponibles para prestar.");
+            return false;
+        }
+    }
 
 
     
