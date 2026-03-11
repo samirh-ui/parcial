@@ -16,7 +16,7 @@ demo/
     ├── main/
     │   ├── java/
     │   │   └── com/example/
-    │   │       ├── Main.java              # Clase principal
+    │   │       ├── Main.java              # Clase principal con demostración
     │   │       ├── Libro.java             # Modelo base de Libro
     │   │       ├── Novela.java            # Modelo de Novela
     │   │       ├── libroTexto.java        # Modelo de Libro de Texto
@@ -27,6 +27,18 @@ demo/
 ```
 
 ## Clases del Modelo
+
+### Main.java
+Clase principal que demuestra el funcionamiento del sistema de gestión de libros.
+
+**Funcionalidad:**
+- Creación de instancias de diferentes tipos de libros (`Libro`, `libroTextoUniajc`, `Novela`)
+- Demostración de métodos de préstamo y devolución
+- Entrada de datos por consola para crear libros dinámicamente
+- Impresión de información de todos los libros creados
+
+**Métodos principales:**
+- `main(String[] args)`: Método principal que ejecuta la demostración del sistema
 
 ### Libro.java
 Clase base que representa un libro en la biblioteca.
@@ -91,6 +103,13 @@ Clase que hereda de `libroTexto` y representa un libro de texto específico de l
 - `toString()`: Sobrescribe el método para incluir información de la facultad
 
 ## Historial de Cambios
+
+### creando la calse main y llamando los objetos con sus metodos
+- Se implementó la clase `Main` con funcionalidad completa
+- Creación de instancias de `Libro`, `libroTextoUniajc` y `Novela`
+- Demostración de métodos `prestamo()` y `devolucion()`
+- Implementación de entrada de datos por consola
+- Impresión de información de todos los objetos creados
 
 ### creando clase novela con su atribuetos, sus metodos y hereda de libro
 - Se creó la clase `Novela` que hereda de `Libro`
