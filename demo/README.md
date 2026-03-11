@@ -136,6 +136,67 @@ Clase que hereda de `libroTexto` y representa un libro de texto específico de l
 - Se añadieron métodos principales para la gestión de libros
 - Implementación de funcionalidades de préstamo y devolución
 
+## Análisis de Herencia y Limitaciones
+
+### Situaciones donde NO se podría realizar la herencia (0.5 puntos)
+
+#### Situación 1: Clase con modificador `final`
+Si la clase `Libro` fuera declarada como `final`:
+```java
+public final class Libro {
+    // atributos y métodos...
+}
+```
+**Problema:** Las clases `libroTexto`, `Novela` y `libroTextoUniajc` NO podrían heredar de `Libro` porque una clase final no puede ser extendida.
+
+**Fragmento problemático:**
+```java
+public final class Libro { }  // Con final
+public class libroTexto extends Libro { }  // ❌ Error: Cannot extend final class
+```
+
+#### Situación 2: Constructor privado sin alternativa
+Si el constructor de `Libro` fuera privado:
+```java
+public class Libro {
+    private Libro(String titulo, String autor, int numEjemplares, int numEjemplaresPrestados) {
+        // ...
+    }
+}
+```
+**Problema:** Las subclases NO podrían llamar al constructor de la clase padre mediante `super()`, lo que impediría la herencia funcional.
+
+**Fragmento problemático:**
+```java
+public class libroTexto extends Libro {
+    public libroTexto(...) {
+        super(titulo, autor, numEjemplares, numEjemplaresPrestados);  // ❌ Error: Constructor is private
+    }
+}
+```
+
+### Nuevos atributos y métodos propuestos (0.5 puntos)
+
+#### Nuevos Atributos:
+1. **`fechaPublicacion` (Date o String)**: Registra la fecha de publicación del libro para mantener un historial y controlar la antigüedad.
+   ```java
+   private String fechaPublicacion;  // Formato: "YYYY-MM-DD"
+   ```
+
+2. **`isbn` (String)**: Código ISBN único para identificar cada libro de forma única en el sistema.
+   ```java
+   private String isbn;  // Ejemplo: "978-0-13-110362-7"
+   ```
+
+#### Método Adicional:
+**`calcularDisponibilidad()`**: Calcula y retorna cuántos ejemplares están disponibles para prestar.
+```java
+public int calcularDisponibilidad() {
+    return numEjemplares - numEjemplaresPrestados;
+}
+```
+**Utilidad:** Permite consultar rápidamente la cantidad de ejemplares disponibles sin realizar cálculos manuales en la clase `Main`.
+
 ## Propiedades Técnicas
 
 - **Java Version**: 17
