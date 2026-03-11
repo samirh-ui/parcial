@@ -49,11 +49,21 @@ Clase que hereda de `Libro` y representa un libro de texto específico para curs
 **Atributos adicionales:**
 - `curso`: Curso académico al que pertenece el libro de texto
 
+**Constructores:**
+- `libroTexto(String titulo, String autor, int numEjemplares, int numEjemplaresPrestados, String curso)`: Constructor que inicializa todos los atributos incluyendo los heredados
+
 **Métodos:**
 - Hereda todos los métodos de la clase `Libro`
-- Getters y setters para el atributo `curso`
+- `getCurso()`: Obtiene el curso del libro de texto
+- `setCurso(String curso)`: Establece el curso del libro de texto
+- `toString()`: Sobrescribe el método para incluir información del curso
 
 ## Historial de Cambios
+
+### agrendo metodos get y set
+- Se agregaron métodos getter y setter para el atributo `curso` en `libroTexto`
+- Se implementó constructor completo para la clase `libroTexto`
+- Se sobrescribió el método `toString()` para incluir información del curso
 
 ### creando clase libro texto, con su atributo y herendando de libro
 - Se creó la clase `libroTexto` que hereda de `Libro`
