@@ -102,6 +102,23 @@ Clase que hereda de `libroTexto` y representa un libro de texto específico de l
 - Hereda todos los métodos de las clases `libroTexto` y `Libro`
 - `toString()`: Sobrescribe el método para incluir información de la facultad
 
+## Análisis de Herencia
+
+### Situaciones donde NO se podría realizar la herencia
+
+1. **Herencia múltiple directa**: No se puede heredar directamente de múltiples clases padre al mismo tiempo. Por ejemplo, no se puede crear una clase que herede tanto de `Libro` como de otra clase `Publicacion` simultáneamente.
+
+2. **Herencia de clases finales**: No se puede heredar de clases marcadas como `final`. Si `Libro` fuera declarada como `final class Libro`, ninguna clase podría heredar de ella.
+
+### Nuevos atributos y métodos sugeridos
+
+**Nuevos atributos:**
+1. `fechaPublicacion`: Para almacenar la fecha de publicación del libro
+2. `isbn`: Código ISBN único para identificación internacional del libro
+
+**Nuevo método:**
+1. `estaDisponible()`: Método que retorna `true` si hay ejemplares disponibles para préstamo (es decir, `numEjemplares > numEjemplaresPrestados`)
+
 ## Historial de Cambios
 
 ### creando la calse main y llamando los objetos con sus metodos
